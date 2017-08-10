@@ -13,15 +13,20 @@ function aleatorio(){
   return cifra.join("")
   }
 //genera el submit cuando se oprime enter
-  $("input").keypress(function(event) {
-      if (event.which == 13) {
-          event.preventDefault();
-          $("form").submit();
-    }
-  });
-})
+  $(".input").keypress(function(e) {
+      if (e.which == 13) {
+        e.preventDefault();
+          var value = $(".input").val();
+//Handlebar
+      var source   = $("#table-template").html();
+      var template = Handlebars.compile(source);
+
+      var context = {number: "value"};
+      var html    = template(context);
+      $(".input").val("");
+
+  }
 //cierra el document
-};
+})
 
-
-
+});

@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Picas y Fijas</title>
-	 <meta charset="utf-8"> 
+  <title>Picas y Fijas</title>
+   <meta charset="utf-8"> 
+  <!--Handlebar-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.3/handlebars.min.js"></script>
 <!--Bootstrap-->
-	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-	<link rel="stylesheet" type="text/css" href="style.css">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <div class="jumbotron">
   <div class="container">
-	<h1>Picas y Fijas</h1>
-	<p>Ingrese cuatro dígitos diferentes y oprima enter</p>
-	<input type="text" name="num" class="input">
+  <h1>Picas y Fijas</h1>
+  <p>Ingrese cuatro dígitos diferentes y oprima enter</p>
+  <input type="text" class="input">
     <table class="table table-bordered">
-    	<thead>
-    		<th>Número</th>
-    		<th>Pilas</th>
-    		<th>Fijas</th>
-    	</thead>
+      <thead>
+        <th>Número</th>
+        <th>Pilas</th>
+        <th>Fijas</th>
+      </thead>
+      <tbody>
+        <script id="table-template" type="text/x-handlebars-template">
+        <tr>
+          <td>{{number}}</td>
+          <td>{{picas}}</td>
+          <td>{{fijas}}</td>
+        </tr>
+        </script>
+      </tbody>
     </table>
   </div>
 </div>
