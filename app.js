@@ -35,10 +35,15 @@ function changeToArrayInteger(item){
     }
 
   //busca si hay picas
-function pica(){
+function pica(value,cifra){
+  valueNew = changeToArrayInteger(value)
+  picas = 0
   for (i = 0; i < cifra.length; i++) {
-    value[i] == cifra.each()
+    if(valueNew.includes(cifra[i])){
+      picas +=1
+    }
   }
+  return picas
 }
 
   //genera el submit cuando se oprime enter
