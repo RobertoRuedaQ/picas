@@ -1,4 +1,7 @@
 $("document").ready(function(){
+//limpia el input en caso tal se haya utilizado
+$(".input").val("")
+
 var value;
 var cifra;
 var fijas;
@@ -92,8 +95,8 @@ console.log(cifra)
       console.log(value)
       console.log(cifra)
       //condicional para cuando gana
-      if(fijaTemporal ===4 && picaTemporal ===4){
-        $("#myModal").focus()
+      if(fijaTemporal === 4 && picaTemporal === 4){
+        $(".modal").modal("show");
       }
       //limpia el input
       $(".input").val("")
