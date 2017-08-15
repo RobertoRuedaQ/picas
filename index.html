@@ -23,17 +23,34 @@
         <th>Fijas</th>
       </thead>
       <tbody>
-        <script id="table-template" type="text/x-handlebars-template">
+        <script id="entry-template" type="text/x-handlebars-template">
         <tr>
           <td>{{number}}</td>
-          <td>{{picas}}</td>
-          <td>{{fijas}}</td>
+          <td>{{valorPicas}}</td>
+          <td>{{valorFijas}}</td>
         </tr>
         </script>
       </tbody>
     </table>
   </div>
 </div>
+<!--Modal de la victoria-->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h1>¡FELICITACIONES!</h1>
+        <h2>¡Has ganado!</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!--JQuery and link to js-->
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="app.js"></script>
