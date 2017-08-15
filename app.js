@@ -1,4 +1,5 @@
 $("document").ready(function(){
+
 //limpia el input en caso tal se haya utilizado
 $(".input").val("")
 
@@ -79,15 +80,16 @@ console.log(cifra)
       $(".input").siblings('p').html('');
       //captura el valor del número ingresado 
       value = $(".input").val()
-
       //ejecuta las funciones
       var fijaTemporal = fija(value, cifra)
       var picaTemporal = pica(value, cifra)
+      
       //Handlebar
       var source   = $("#entry-template").html();
       var template = Handlebars.compile(source);
-      var context = {number:"value", valorPicas:"picaTemporal", valorFijas:"fijaTemporal"};
+      var context = {number:value, valorPicas:picaTemporal, valorFijas:fijaTemporal};
       var html    = template(context);
+      $("thead").append(html)
 
       //test
       console.log(fijaTemporal)
