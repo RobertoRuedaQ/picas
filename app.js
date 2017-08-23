@@ -52,7 +52,6 @@ function pica(value,cifra){
 }
 //se genera número aleatorio
 aleatorio()
-console.log(cifra)
 
   //genera la acción cuando se oprime enter
   $(".input").keypress(function(e){
@@ -91,11 +90,6 @@ console.log(cifra)
       var html    = template(context);
       $("thead").append(html)
 
-      //test
-      console.log(fijaTemporal)
-      console.log(picaTemporal)
-      console.log(value)
-      console.log(cifra)
       //condicional para cuando gana
       if(fijaTemporal === 4 && picaTemporal === 4){
         $(".modal").modal("show");
